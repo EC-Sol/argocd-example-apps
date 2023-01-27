@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: argocd-gateway
-  namespace: istio-system
+  namespace: guestbook
 spec:
   selector:
     istio: ingressgateway
@@ -18,7 +18,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: argocd-virtual-service
-  namespace: istio-system
+  namespace: guestbook
 spec:
   gateways:
   - argocd-gateway
