@@ -21,11 +21,11 @@ metadata:
   namespace: istio-system
 spec:
   gateways:
-  - istio-addons-gateway
+  - argocd-gateway
   hosts:
   - "argocd.example.com"
   http:
-  - name: istio-grafana-route
+  - name: istio-guestbook-route
     route:
     - destination: # service
         host: guestbook-ui
